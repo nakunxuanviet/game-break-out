@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đập gạch</title>
+    <link rel="shortcut icon" href="//james.codegym.vn/pluginfile.php/1/theme_remui/faviconurl/1558515587/icon.png" />
+
+    <style>
+        body{
+            background-image: url("img/bodybg.jpg");
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+        *{
+            font-family: "Segoe UI";
+        }
+        #sound{
+            width: 30px;
+            height : 30px;
+            cursor: pointer;
+            position: absolute;
+            top : 465px;
+            left : 15px;
+        }
+        #gameover{
+            position: absolute;
+            width : 400px;
+            height: 500px;
+            background: rgba(0,0,0,0.5);
+            display: none;
+        }
+        #youwon{
+            width: 100px;
+            position: absolute;
+            top : 200px;
+            left : 150px;
+            display: none;
+        }
+        #youlose{
+            width:400px;
+            position: absolute;
+            top: 100px;
+            left : 0px;
+            display: none;
+        }
+        #restart{
+            position: absolute;
+            top: 310px;
+            left : 155px;
+            cursor: pointer;
+            font-size: 1.25em;
+            color : #FFF;
+        }
+        .button {
+            position: relative;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 16px;
+            color: #FFFFFF;
+            padding: 7px 17px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            margin-left: 157px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" id="" onclick="playGame()">PlayGame</button>
+    <div class="sound">
+        <img src="img/SOUND_ON.png" alt="" id="sound">
+    </div>
+
+    <div id="gameover">
+        <img src="img/youwon.png" alt="" id="youwon">
+        <img src="img/gameover.png" alt="" id="youlose">
+        <div id="restart">Play Again!</div>
+    </div>
+
+    <canvas id="game" width="400" height="500" style="border: 1px solid #eaeff3"></canvas>
+
+    <script src="soundAndImage.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
